@@ -1,17 +1,70 @@
-<script>
-const slider = document.getElementById("slider");
-const afterContainer = document.getElementById("afterContainer");
-const sliderLine = document.getElementById("sliderLine");
-const sliderButton = document.getElementById("sliderButton");
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-function updateSlider() {
-    const value = slider.value + "%";
-
-    afterContainer.style.width = value;
-    sliderLine.style.left = value;
-    sliderButton.style.left = value;
+<style>
+body{
+  font-family:Arial,sans-serif;
+  display:flex;
+  justify-content:center;
+  padding:30px;
 }
 
-slider.addEventListener("input", updateSlider);
-updateSlider();
+.container{
+  position:relative;
+  width:800px;
+  max-width:100%;
+  overflow:hidden;
+}
+
+.before img,
+.after img{
+  display:block;
+  width:100%;
+}
+
+.after{
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  overflow:hidden;
+}
+
+#slider{
+  width:100%;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+  <div class="container">
+
+    <div class="before">
+      <img src="https://picsum.photos/id500
+    </div>
+
+    <div class="after" id="after">
+      <img src="https://picsum.photos/id/1018   </div>
+
+  </div>
+
+  <input id="slider" type="range" min="0" max="100" value="50">
+</div>
+
+<script>
+const slider = document.getElementById("slider");
+const after = document.getElementById("after");
+
+slider.addEventListener("input", function () {
+  after.style.width = this.value + "%";
+});
 </script>
+
+</body>
+</html>
