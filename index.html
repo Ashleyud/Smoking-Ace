@@ -1,70 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-body{
-  font-family:Arial,sans-serif;
-  display:flex;
-  justify-content:center;
-  padding:30px;
-}
-
-.container{
-  position:relative;
-  width:800px;
-  max-width:100%;
-  overflow:hidden;
-}
-
-.before img,
-.after img{
-  display:block;
-  width:100%;
-}
-
-.after{
-  position:absolute;
-  top:0;
-  left:0;
-  width:50%;
-  overflow:hidden;
-}
-
-#slider{
-  width:100%;
-  margin-top:20px;
-}
-</style>
+  <title>Test Images</title>
+  <style>
+    img{
+      width:400px;
+      margin:10px;
+    }
+  </style>
 </head>
-
 <body>
 
-<div>
-  <div class="container">
+<h1>Image Test</h1>
 
-    <div class="before">
-      <img src="https://picsum.photos/id500
-    </div>
+<img src="https://picsum.photos/800m=1
 
-    <div class="after" id="after">
-      <img src="https://picsum.photos/id/1018   </div>
-
-  </div>
-
-  <input id="slider" type="range" min="0" max="100" value="50">
-</div>
-
-<script>
-const slider = document.getElementById("slider");
-const after = document.getElementById("after");
-
-slider.addEventListener("input", function () {
-  after.style.width = this.value + "%";
-});
-</script>
+<img srcpicsum.photos/800/500?random=2
 
 </body>
 </html>
